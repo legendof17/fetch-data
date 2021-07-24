@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Fetch from "./components/fetch";
 
 function App() {
+  const [ip, setIP] = useState(0);
+  useEffect(() => {
+    async function fetchit() {
+      // var raw = await Fetch();
+      setIP(await Fetch());
+      // console.log(raw);
+    }
+
+    fetchit();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello World</h1>
+      <h6>{ip}</h6>
     </div>
   );
 }
