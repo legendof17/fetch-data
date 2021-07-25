@@ -1,5 +1,6 @@
 {
   "name": "fetch-data",
+  "homepage": "https://legendof17.github.io/fetch-data/",
   "version": "0.1.2",
   "private": true,
   "dependencies": {
