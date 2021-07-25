@@ -1,23 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.css";
-import Fetch from "./components/fetch";
+import Home from "./pages/Home";
 
 function App() {
-  const [ip, setIP] = useState(0);
-  useEffect(() => {
-    async function fetchit() {
-      // var raw = await Fetch();
-      setIP(await Fetch());
-      // console.log(raw);
-    }
-
-    fetchit();
-  }, []);
-
   return (
     <div className="App">
       <h1>Hello World</h1>
-      <h6>{ip}</h6>
+      <Home />
     </div>
   );
 }
